@@ -1,0 +1,51 @@
+@import "../../static/iconfont/iconfont.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5rem;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.function-lists{
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+}
+.function-list{
+  position: relative;
+  padding-left: 1rem;
+  height: 2.5rem;
+  color: rgb(87, 85, 85);
+  /* font-size: 0.8rem; */
+  line-height: 2.5rem;
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+.f-l{
+  border-top: 1px solid rgb(223, 223, 223);
+}
+.function-list-title{
+  color: rgb(134, 134, 134);
+  font-size: 0.7rem;
+  background-color: rgb(243, 243, 243);
+  padding-left: 0.5rem;
+}
+.image-go{
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.75rem;
+}
+.changeBg{
+  opacity: 0.9;
+  background: #f7f7f7;
+}

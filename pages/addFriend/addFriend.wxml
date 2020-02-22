@@ -1,0 +1,5 @@
+<!--pages/addFriend/addFriend.wxml-->
+<view class="search-wrap">
+  <input class="search-friend" focus placeholder="根据微信号进行搜索" confirm-type="search"></input>
+  <text class="iconfont iconwinfo-icon-tianjiaguanzhu search" bindtap="searchFriend"> </text>
+</view>

@@ -1,0 +1,36 @@
+/* pages/friends/friends.wxss */
+@import "../../static/iconfont/iconfont.wxss";
+
+.add-friend{
+  width: 100%;
+  text-align: center;
+  color: rgb(87, 85, 85);
+  font-size: 1rem;
+  padding: 1rem 0;
+  background-color: rgb(243, 243, 243);
+}
+.friend-th{
+  margin: 0.5rem 1rem;
+  padding: 0.25rem 0;
+  height: 3rem;
+  position: relative;
+  border-bottom: 1px solid rgb(223, 223, 223);
+
+}
+.friend-avatar{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+}
+.friend-nickname{
+  color: rgb(87, 85, 85);
+  font-size: 1rem;
+  position: absolute;
+  top: 0.75rem;
+  left: 4rem;
+}
+.cancel-friend{
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+}

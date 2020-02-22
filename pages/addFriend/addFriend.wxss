@@ -1,0 +1,16 @@
+/* pages/addFriend/addFriend.wxss */
+@import "../../static/iconfont/iconfont.wxss";
+
+.search-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.search-friend{
+  width: 70%;
+  height: 2rem;
+}
+.search{
+  height: 2rem;
+  line-height: 2rem;
+}

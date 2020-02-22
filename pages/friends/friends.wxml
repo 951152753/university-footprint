@@ -1,0 +1,11 @@
+<!-- 我的关注 页面 -->
+<view>
+  <view class="add-friend">
+    <text class="iconfont iconyaoqinghaoyou" bindtap="addFriend"> 添加关注</text>
+  </view>
+  <view class="friend-th" wx:for="{{friendsList}}" wx:key="code">
+    <image bindtap="bindViewTap" class="friend-avatar" src="{{item.avatar}}"></image>
+    <text class="friend-nickname">{{item.nikeName}}</text>
+    <icon class="cancel-friend" type="cancel" size="20" color="rgb(87, 85, 85)"/>
+  </view>
+</view>

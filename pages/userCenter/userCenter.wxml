@@ -1,0 +1,51 @@
+<!-- 个人中心 页面 -->
+<view class="container">
+  <!-- 用户信息 -->
+  <view class="userinfo">
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+    <!-- 未登录 -->
+    <block wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <image class="userinfo-avatar" src="../../static/image/not-login.png" mode="cover"></image>
+      <text class="userinfo-nickname"> 登录 </text>
+    </block>
+    <!-- 登录成功 -->
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- 功能列表 -->
+  <view class="function-lists">
+    <view class="function-list-title f-l">扩展 && 资料</view>
+    <view class="function-list f-l" bindtap="showPOI" hover-class="changeBg">
+      <text class="iconfont iconremen1"> 周边兴趣点</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+    <view class="function-list" bindtap="showRecord" hover-class="changeBg">
+      <text class="iconfont iconjilu1"> 我的记录</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+    <view class="function-list-title">编辑 && 设置</view>
+    <view class="function-list f-l" bindtap="editAccountInfo" hover-class="changeBg">
+      <text class="iconfont iconbianji-"> 修改资料</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+    <view class="function-list" bindtap="changeSetting" hover-class="changeBg">
+      <text class="iconfont iconshezhix"> 权限设置</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+    <view class="function-list-title">使用 && 反馈</view>
+    <view class="function-list help f-l" bindtap="getHelp" hover-class="changeBg">
+      <text class="iconfont iconbangzhu3"> 使用帮助</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+    <view class="function-list" bindtap="giveEncouragement" hover-class="changeBg">
+      <text class="iconfont icondianzan2"> 给个鼓励</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+    <view class="function-list" bindtap="giveFeedback" hover-class="changeBg">
+      <text class="iconfont iconwentifankui"> 意见反馈</text>
+      <image src="../../static/image/routerGo1.png" class="image-go"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/footprint/footprint",
+    "pages/userCenter/userCenter",
+    "pages/friends/friends",
+    "pages/showPOI/showPOI",
+    "pages/record/record",
+    "pages/accountInfo/accountInfo",
+    "pages/feedback/feedback",
+    "pages/encourage/encourage",
+    "pages/help/help",
+    "pages/setting/setting",
+    "pages/addFriend/addFriend"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园脚印",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "打卡",
+        "iconPath": "static/image/location-gray.png",
+        "selectedIconPath": "static/image/location-color.png"
+      },
+      {
+        "pagePath": "pages/footprint/footprint",
+        "text": "脚印",
+        "iconPath": "static/image/footprint-gray.png",
+        "selectedIconPath": "static/image/footprint-color.png"
+      },
+      {
+        "pagePath": "pages/friends/friends",
+        "text": "我的关注",
+        "iconPath": "static/image/friend3-gray.png",
+        "selectedIconPath": "static/image/friend3-color.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "个人中心",
+        "iconPath": "static/image/user-gray.png",
+        "selectedIconPath": "static/image/user-color.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
