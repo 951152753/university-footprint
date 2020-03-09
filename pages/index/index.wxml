@@ -1,16 +1,15 @@
 <!-- 打卡 页面 -->
-<view class="map_container">
-  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
-</view>
-<view class="map_text">
-  <text class="h1">{{textData.name}}</text>
-  <text>{{textData.desc}}</text>
-</view>
-<!-- <view class="container">
-  <view class="universityMap">
-    <button class='button-function' type='primary' bindtap='chaKan'>查看</button>
-    <button class='button-function' type='primary' bindtap='huoQu'>获取</button>
-    <button class='button-function' type='primary' bindtap='xuanZe'>选择</button>
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
+<map 
+  id="map" 
+  class="map-view" 
+  longitude="{{longitude}}"
+  latitude="{{latitude}}"
+  scale="{{scale}}" 
+  controls="{{controls}}" 
+  bindcontroltap="controltap" 
+  markers="{{markers}}" 
+  bindmarkertap="markertap" 
+  show-location="true"
+  enable-rotate="true"
+  bindpoitap="poitap" 
+  show-compass='true'></map>

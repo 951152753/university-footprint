@@ -1,0 +1,13 @@
+<!--pages/clockIn/clockIn.wxml-->
+<view class="section">
+  <textarea class="message" placeholder="请输入..." name="textarea" maxlength="-1" bindinput="recordInput"/>
+  <image src="{{imageSrc}}" class="added-img"></image>
+  <view class="btns-warp">
+    <text class="iconfont iconiconset0392 icon-style"> {{locationName}}</text>
+    <button bindtap="backToHome">我 来 过</button>
+    <button bindtap="uploadImg">
+      <text class="iconfont icontianjiazhaopian1"> </text>
+    </button>
+    <button bindtap="saveMessage" type="primary" decode="{{true}}">保 存</button>
+  </view>
+</view>

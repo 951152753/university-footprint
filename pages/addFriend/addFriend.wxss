@@ -8,9 +8,33 @@
 }
 .search-friend{
   width: 70%;
-  height: 2rem;
+  height: 3rem;
 }
 .search{
-  height: 2rem;
-  line-height: 2rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+.add{
+  height: 3rem;
+  line-height: 3rem;
+}
+.friendsInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.result{
+ position: relative
+}
+.friend-avatar{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.friend-nickname{
+  color: rgb(87, 85, 85);
+  font-size: 1rem;
+  position: absolute;
+  top: 0.75rem;
+  left: 3.5rem;
 }

@@ -1,2 +1,7 @@
 <!--pages/setting/setting.wxml-->
-<text>pages/setting/setting.wxml</text>
+<view class="share-record">
+  <text class="iconfont iconicon- share-text"> 是否与他人共享我的记录</text>
+  <view class="share-switch">
+    <switch type="switch" checked="{{shareChecked}}" bindchange="shareChange"/>
+  </view>
+</view>

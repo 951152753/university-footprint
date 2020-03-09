@@ -3,21 +3,21 @@
   <view class="tr bg-w">
     <view class="th">日期</view>
     <view class="th">位置</view>
-    <view class="th ">心情</view>
-    <view class="th ">详情</view>
+    <view class="th">心情</view>
+    <view class="th">详情</view>
   </view>
   <block wx:for="{{listData}}" wx:key="code">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.period}}</view>
       <view class="td">{{item.location}}</view>
       <view class="td">{{item.mood}}</view>
-      <view class="td">{{item.detail}}</view>
+      <view class="td" bindtap="showDetail">{{item.detail}}</view>
     </view>
     <view class="tr" wx:else>
       <view class="td">{{item.period}}</view>
       <view class="td">{{item.location}}</view>
       <view class="td">{{item.mood}}</view>
-      <view class="td">{{item.detail}}</view>
+      <view class="td" bindtap="showDetail">{{item.detail}}</view>
     </view>
   </block>
 </view>

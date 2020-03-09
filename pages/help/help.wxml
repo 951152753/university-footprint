@@ -1,2 +1,47 @@
-<!--pages/help/help.wxml-->
-<text>pages/help/help.wxml</text>
+<view>
+  <view class="title">
+    1.小程序简介
+    <text class="content" decode="{{true}}">
+    &emsp;&emsp;本小程序是一款主要针对大学生记录和分享校园生活的“轻便型APP”。
+    &emsp;&emsp;在这里，您能记录您的校园生活，留下开心快乐以及难忘的日子；
+    &emsp;&emsp;您能关注您的同学、朋友，查看他们的故事，了解他们的心情，分享快乐的同时增进友谊；
+    &emsp;&emsp;您还可以查看校园周围的兴趣点，为您美好的校园生活锦上添花。
+    </text>
+  </view>
+  <view class="title">
+    2.打卡流程介绍
+    <text class="content" decode="{{true}}">
+    &emsp;&emsp;在【校园地图】页，带有小图标的地点都是可以点击的，点击后方可进行对应地点的打卡操作，打卡方式分为两种。
+    &emsp;&emsp;第一种：直接点击“我来过”按钮，会直接生成一条来过此地的记录，不会有任何其余内容的记录，查看时，也只显示“我来过”这三个字和打卡的时间地点。
+    &emsp;&emsp;第二种：添加内容和图片，点击保存，此时会把您填写的内容和图片全都保存起来，查看时也都能查看的到。
+    </text>
+  </view>
+  <view class="title">
+    3.我生成的记录在哪里查看？
+    <text class="content" decode="{{true}}">
+    &emsp;&emsp;有两种查看方式。
+    &emsp;&emsp;方式一：在【脚印】页，有您按时间排序的个人打卡记录，点击详情，会有详细的打卡内容弹出；
+    &emsp;&emsp;方式二：在【个人中心】-【我的记录】下，有按地点名称分类统计的您的打卡记录，在这里，您可以方便的按照对应地点找到和查看您的记录。</text>
+  </view>
+  <view class="title">
+    4.添加关注以及关注人记录的查看
+    <text class="content" decode="{{true}}">
+    &emsp;&emsp;在我的关注页会有关注对象的信息展示，点击头像即可查看此人的打卡记录，前提是她开启了共享记录的权限。
+    &emsp;&emsp;若想添加关注，点击添加关注后，可通过手机号搜索到被关注人，点击对应的icon进行添加即可。</text>
+  </view>
+  <view class="title">
+    5.周边兴趣点的使用
+    <text class="content" decode="{{true}}">
+    &emsp;&emsp;【个人中心】-【周边兴趣点】，这里有您周围受关注的多种设施场所，包括餐厅、景点、学校、社区、住宿、娱乐等，可供您就近查看和选择。
+    </text>
+  </view>
+  <view class="title">
+    6.我的记录不想被别看到？
+    <text class="content" decode="{{true}}">
+    &emsp;&emsp;您可以在【个人中心】-【权限设置】中，设置您的记录共享权限。
+    </text>
+  </view>
+  <view>
+    论文材料：图片的上传：用分布式文件系统——FastDFS用来保存图片，在nginx配置图片服务器，在映射到本地
+  </view>
+</view>

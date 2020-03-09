@@ -1,18 +1,46 @@
 // pages/setting/setting.js
+var pageData = {
+  data: {
+    shareChecked: false,
+  }
+}
+for (var i = 1; i <= 2; ++i) {
+  (function () {
+    pageData["shareChange"] = function (e) {
+      console.log("shareSwitch 改变，携带值为", e.detail.value)
+      var obj = {}
+      obj[shareChange] = e.detail.value
+      this.setData(obj)
+    }
+  })(i)
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    // shareChecked: false
   },
-
+  pageData,
+  // shareChange: function (e) {
+  //   console.log('switch 改变，携带值为', e.detail.value);
+  //   this.setData({
+  //     shareChecked: e.detail.value
+  //   })
+  // },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // wx.request({
+    //   // url: 'http://121.42.15.17:8080/docker/test',
+    //   url: 'http://762a54b8.ngrok.io/hello',
+    //   success: function (res) {
+    //     console.log(res)
+    //   }
+    // })
   },
 
   /**

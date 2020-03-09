@@ -1,77 +1,80 @@
 // pages/friends/friends.js
-
+const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    friendsList: [
-      { "code": "1", "avatar": "../../static/image/me1.jpeg", "nikeName": "小美女1号" },
-      { "code": "2", "avatar": "../../static/image/me2.jpeg", "nikeName": "小美女2号" },
-      { "code": "3", "avatar": "../../static/image/me3.jpeg", "nikeName": "小美女3号" },
-      { "code": "4", "avatar": "../../static/image/me4.jpeg", "nikeName": "小美女4号" }
-    ]
+    friendsList: '',
+    toOpenId: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log('friends onLoad')
-  },
-  addFriend: function () {
+  // 跳转到 添加关注
+  goTOAddFriend: function() {
     wx.navigateTo({
       url: '../addFriend/addFriend',
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  // 点击查看被关注人的记录
+  lookRecords: function() {
 
   },
+  check: function(e) {
+    console.log(e)
+  },
+  // 取消关注
+  cancelFriend: function(e) {
+    var that = this
+    var id = e.currentTarget.id
+    this.setData({
+      toOpenId: that.data.friendsList[id].openId
+    })
+    // var open = this.data.friendsList[id]
+    // console.log('!!!!!!!!!', e.currentTarget.id, open)
 
+    wx.request({
+      url: app.globalData.host + 'userCon/deleteUserFollow',
+      data: {
+        fromOpenId: app.globalData.openId,
+        toOpenId: that.data.toOpenId
+      },
+      header: app.globalData.header,
+      method: 'GET',
+      success: function(res) {
+        wx.showToast({
+          title: '' + res.data.message,
+          icon: 'success'
+        })
+        that.selectMyFollow()
+      }
+    })
+  },
+  // 展示关注列表
+  selectMyFollow: function() {
+    var that = this
+    wx.request({
+      url: app.globalData.host + 'userCon/selectMyFollow',
+      data: {
+        fromOpenId: app.globalData.openId
+      },
+      header: app.globalData.header,
+      method: 'GET',
+      success: function(res) {
+        that.setData({
+          friendsList: res.data.data
+        })
+      }
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function(options) {
+    console.log('friends onLoad')
+  },
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShow: function() {
+    this.selectMyFollow()
   }
 })

@@ -1,0 +1,21 @@
+/* pages/clockIn/clockIn.wxss */
+@import "../../static/iconfont/iconfont.wxss";
+.section{
+  width: 100%
+}
+.message{
+  width: 100%
+}
+.added-img{
+  width: 8rem;
+  height: 8rem;
+}
+.icon-style{
+  display: block;
+  margin-left: 0.5rem
+}
+.btns-warp{
+  width: 100%;
+  position: absolute;
+  bottom: 0rem;
+}

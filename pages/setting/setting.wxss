@@ -1,1 +1,17 @@
 /* pages/setting/setting.wxss */
+@import "../../static/iconfont/iconfont.wxss";
+
+.share-record{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.share-text{
+  width: 70%;
+  padding-left: 1rem;
+  margin: auto 0;
+}
+.share-switch{
+  padding-right: 1rem;
+}

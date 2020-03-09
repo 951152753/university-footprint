@@ -1,1 +1,23 @@
 /* pages/accountInfo/accountInfo.wxss */
+@import "../../static/iconfont/iconfont.wxss";
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: relative;
+}
+.info-text{
+  width: 30%;
+  padding-left: 1rem;
+}
+.info-input{
+  width: 60%;
+  padding-right: 1rem;
+  position: absolute;
+  right: 0;
+  color: rgb(121, 118, 118)
+}
+.save-info{
+  margin-top: 2rem; 
+}

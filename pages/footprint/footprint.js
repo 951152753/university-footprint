@@ -13,6 +13,13 @@ Page({
       { "code": "5", "period": "2020-02-25", "location": "资环楼", "mood": "☆☆☆", "detail": "···" }
     ]
   },
+  showDetail: function () {
+    wx.showToast({
+      title: 'lalala',
+      icon: 'none',
+      duration: 5000
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,1 +1,73 @@
-/* pages/record/record.wxss */
+page {
+  background: #f3f7f7;
+}
+
+.list-name-box {
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  padding: 0 25rpx;
+  font-size: 32rpx;
+}
+
+.list-item-name {
+  flex: 1;
+}
+
+.icon-down {
+  width: 35rpx;
+  height: 35rpx;
+  transition: transform 0.3s;
+}
+
+/* .list-item-box{
+  height: 0;
+  transition:height  0.3s;
+  overflow: hidden;
+}
+.list-item-box-show{
+  height: 500rpx;
+} */
+
+.list-item-name-box {
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  font-size: 30rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 25rpx 0 50rpx;
+}
+
+.list-item-name {
+  /* 文本溢出 不换号 出现省略号 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-box {
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; */
+}
+
+.detail {
+  display: flex;
+  padding: 0 25rpx 0 50rpx;
+  margin-top: 1rem;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+}
+.detail-title{
+  white-space: nowrap;
+}
+.detail-img{
+  margin-top: 1rem;
+}
+.icon-down-rotate {
+  transform: rotate(180deg);
+}

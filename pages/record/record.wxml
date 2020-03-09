@@ -1,2 +1,28 @@
-<!--pages/record/record.wxml-->
-<text>pages/record/record.wxml</text>
+<!-- 我的记录 页面 -->
+<view class='list-box' wx:for='{{list}}' wx:key='this' wx:for-item='parentItem' wx:for-index='parentIndex'>
+  <view class='list'>
+    <view class='list-name-box' catchtap='listTap' data-parentindex='{{parentIndex}}'>
+      <text class='list-item-name'>{{parentItem.listName}}</text>
+      <image src='../../static/image/down.png' class='icon-down {{parentItem.show&&"icon-down-rotate"}}'></image>
+    </view>
+    <view class='list-item-box' wx:if='{{parentItem.show}}'>
+      <view class='list-item' wx:for='{{parentItem.item}}' wx:key='this' catchtap='listItemTap' data-index='{{index}}' data-parentindex='{{parentIndex}}'>
+        <view class='list-item-name-box'>
+          <text class='list-item-name'>{{item.itemName}}</text>
+          <image src='../../static/image/down.png' class='icon-down {{item.show&&"icon-down-rotate"}}'></image>
+        </view>
+        <view class='detail-box' wx:if='{{item.show}}'>
+          <view class='detail'>
+            <text class='detail-title'>内容：</text>
+            <text class='detail-text'>{{item.content}}</text>
+          </view>
+          <view class='detail'>
+            <text class='detail-title'>时间：</text>
+            <text class='detail-text'>{{item.time}}</text>
+          </view>
+          <image class="detail-img" src="{{item.image}}" mode="aspectFit"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,1 +1,7 @@
-/* pages/help/help.wxss */
+.title{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.content{
+  font-size: 1rem;
+}

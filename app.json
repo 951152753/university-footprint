@@ -11,7 +11,8 @@
     "pages/encourage/encourage",
     "pages/help/help",
     "pages/setting/setting",
-    "pages/addFriend/addFriend"
+    "pages/addFriend/addFriend",
+    "pages/clockIn/clockIn"
   ],
   "permission": {
     "scope.userLocation": {

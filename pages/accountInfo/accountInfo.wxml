@@ -1,2 +1,38 @@
 <!--pages/accountInfo/accountInfo.wxml-->
-<text>pages/accountInfo/accountInfo.wxml</text>
+<view class="account-info">
+  <view class="info nikeName">
+    <text class="iconfont iconxingming info-text"> 昵称：</text>
+    <input class="info-input" value="{{nickName}}" bindinput="bindNameChange"></input>
+  </view>
+  <view class="info sex">
+    <text class="iconfont iconV info-text"> 性别：</text>
+    <picker class="info-input" disabled="true" value="{{sex}}" range="{{sexArray}}">
+      <view class="picker">{{sexArray[sex]}}</view>
+    </picker>
+  </view>
+  <view class="info birthday">
+    <text class="iconfont iconshengri info-text"> 生日：</text>
+    <picker class="info-input" mode="date" value="{{date}}" start="1990-01-01" end="2020-01-01" bindchange="bindDateChange">
+      <view class="picker">{{date}}</view>
+  </picker>
+  </view>
+  <view class="info university">
+    <text class="iconfont iconxuexiao2 info-text"> 就读高校：</text>
+    <input class="info-input" placeholder="请输入就读高校" bindinput="bindUniversityChange" value="{{university}}"></input>
+  </view>
+  <view class="info grade">
+    <text class="iconfont iconxuexiao info-text"> 年级：</text>
+    <picker class="info-input" bindchange="bindGradeChange" value="{{grade}}" range="{{gradeArray}}">
+      <view class="picker">{{gradeArray[grade]}}</view>
+    </picker>
+  </view>
+  <view class="info phone">
+    <text class="iconfont iconbohao info-text"> 手机号：</text>
+    <input class="info-input" placeholder="请输入手机号" bindinput="bindPhoneNumChange" value="{{phoneNum}}"></input>
+  </view>
+  <view class="info email">
+    <text class="iconfont iconyouxiang1 info-text"> 邮箱：</text>
+    <input class="info-input" placeholder="请输入邮箱" bindinput="bindEmailChange" value="{{email}}"></input>
+  </view>
+  <button class="save-info" type="primary" form-type="submit" bindtap="saveBtn">保存</button>
+</view>
